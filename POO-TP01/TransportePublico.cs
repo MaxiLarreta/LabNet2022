@@ -21,6 +21,7 @@ namespace POO_TP01
         {
            return this.pasajeros;
         }
+
         public int GetId()
         {
             return this.id;
