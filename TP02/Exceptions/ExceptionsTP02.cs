@@ -9,11 +9,12 @@ namespace TP02.Exceptions
 {
     public class ExceptionsTP02
     {
-        public static decimal RealizarOperacion(decimal? dividendo = null, decimal? divisor = null)
+
+        public static decimal? RealizarOperacion(decimal? dividendo = null, decimal? divisor = null)
         {
             decimal numero1;
             decimal numero2;
-            decimal resultado = 0;
+            decimal? resultado = null;
 
             try
             {
@@ -34,10 +35,6 @@ namespace TP02.Exceptions
             catch (FormatException)
             {
                 Console.WriteLine("Seguro Ingreso una letra o no ingreso nada!");
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine($"Solo Chuck Norris divide por cero! Mensaje de excepción: {ex.Message}");
             }
             catch (Exception ex)
             {
@@ -76,7 +73,7 @@ namespace TP02.Exceptions
         {
             try
             { 
-                throw new CustomException(mensaje);
+               throw new CustomException(mensaje);
             }
             catch (CustomException ex)
             {

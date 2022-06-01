@@ -19,41 +19,28 @@ namespace TP02.Exceptions.Tests
         {
             decimal dividendo = 5;
             decimal divisor = 5;
-            decimal expected = dividendo.Dividir(divisor);
-            decimal resultado = ExceptionsTP02.RealizarOperacion(dividendo, divisor);
+            decimal? expected = dividendo.Dividir(divisor);
+            decimal? resultado = ExceptionsTP02.RealizarOperacion(dividendo, divisor);
             Assert.AreEqual(expected, resultado);
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(FormatException))]
-        public void Operacion_FormatException()
+        public void ExcepcionCero()
         {
-            ExceptionsTP02.RealizarOperacion(5, decimal.Parse(" "));
+            decimal dividendo = 5;
+            decimal divisor = 0;
+            decimal? resultado = dividendo.Dividir(divisor);
+            Assert.IsNull(resultado);
         }
 
-        //Se que no es la manera de testear una excepción pero no me funcionaba
         [TestMethod()]
-        public void ExcepcionCero() 
+        public void RealizarOperacionConCero()
         {
-            try
-            {
-                ExceptionsTP02.RealizarOperacion(5, 0);
-            }
-            catch (DivideByZeroException ex)
-            {
-                Assert.AreEqual("Intento de dividir por cero.", ex.Message);
-            }
-           
+            decimal dividendo = 5;
+            decimal divisor = 0;
+            decimal? resultado = ExceptionsTP02.RealizarOperacion(dividendo, divisor);
+            Assert.IsNull(resultado);
         }
-
-       // No entiendo por que no funciona este test
-        //[TestMethod()]
-        //[ExpectedException(typeof(DivideByZeroException))]
-        //public void ExcepcionCeroOriginal()
-        //{
-        //  ExceptionsTP02.RealizarOperacion(5, 0);
-           
-        //}
     }
 
 }
