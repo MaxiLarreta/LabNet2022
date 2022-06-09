@@ -62,9 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EF.CustomExceptions\EF.Common.csproj">
-      <Project>{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}</Project>
-      <Name>EF.Common</Name>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{3C6CD45F-3CB7-42ED-8D55-1FB4F9BC570B}</Project>
+      <Name>Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\EF.Data\EF.Data.csproj">
       <Project>{E7E1BB11-190A-42E7-BF4F-B4BFD5585378}</Project>

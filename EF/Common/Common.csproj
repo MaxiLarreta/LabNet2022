@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}</ProjectGuid>
+    <ProjectGuid>{3C6CD45F-3CB7-42ED-8D55-1FB4F9BC570B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EF.CustomExceptions</RootNamespace>
-    <AssemblyName>EF.CustomExceptions</AssemblyName>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="CustomExceptions\CompanyNameEmptyException.cs" />
     <Compile Include="CustomExceptions\PhoneEmptyException.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CustomExceptions\ShipperNullException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
