@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF.Logic.CustomExceptions
+namespace EF.Common.CustomExceptions
 {
-    internal class ShipperNullException : Exception
+    public class ShipperNullException : Exception
     {
         public ShipperNullException() : base("No se encontro ningun Shipper con ese ID")
         {

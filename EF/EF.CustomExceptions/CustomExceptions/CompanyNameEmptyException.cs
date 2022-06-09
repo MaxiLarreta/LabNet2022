@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF.Logic.CustomExceptions
+namespace EF.Common.CustomExceptions
 {
-    internal class CompanyNameEmptyException : Exception
+    public class CompanyNameEmptyException : Exception
     {
         public CompanyNameEmptyException() : base("Ingreso un nombre vacío")
         {

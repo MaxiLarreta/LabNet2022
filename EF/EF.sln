@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.Entities", "EF.Entities\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.LogicTests", "EF.LogicTests\EF.LogicTests.csproj", "{5D8C4082-8A82-461E-A9CE-02B3A384167B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.Common", "EF.CustomExceptions\EF.Common.csproj", "{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5D8C4082-8A82-461E-A9CE-02B3A384167B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D8C4082-8A82-461E-A9CE-02B3A384167B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D8C4082-8A82-461E-A9CE-02B3A384167B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C96860-8891-4DE8-B7FB-48AAF1FEB4F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

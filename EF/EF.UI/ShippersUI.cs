@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EF.UI
 {
-    public class ShippersUI
+    public class ShippersUI : IUI<int>
     {
         protected ShippersLogic _shippersLogic;
         public List<string> idShippers { get; set; }
@@ -33,28 +33,28 @@ namespace EF.UI
             }
         }
 
-        public void Add(string shipperCompanyName, string shipperPhone)
+        public bool Add(string shipperCompanyName, string shipperPhone)
         {
-            _shippersLogic.Add(new Shippers
+           return _shippersLogic.Add(new Shippers
             {
                 CompanyName = shipperCompanyName,
                 Phone = shipperPhone
             });
         }
 
-        public void Update(int shipperId, string shipperPhone)
+        public bool Update(int shipperId, string shipperPhone)
         {
-            _shippersLogic.Update(new Shippers
+           return _shippersLogic.Update(new Shippers
             {
                 ShipperID = shipperId,
                 Phone = shipperPhone
             });
         }
-        public void Delete(int shipperId)
+        public bool Delete(int shipperId)
         {
             _shippersLogic.Delete(shipperId);
             idShippers.Remove(shipperId.ToString());
+            return true;
         }
-
     }
 }

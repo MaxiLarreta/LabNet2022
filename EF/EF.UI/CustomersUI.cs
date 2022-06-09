@@ -15,8 +15,6 @@ namespace EF.UI
         {
                 _customersLogic = new CustomersLogic();
         }
-
-
         public void GetAll()
         {
             Console.WriteLine("*** Customers ***");

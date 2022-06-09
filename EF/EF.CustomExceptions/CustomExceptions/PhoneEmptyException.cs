@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF.Logic.CustomExceptions
+namespace EF.Common.CustomExceptions
 { 
 	public class PhoneEmptyException : Exception
 	{

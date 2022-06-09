@@ -10,8 +10,8 @@ namespace EF.Logic
     public interface ILogic<T, idType> where T : Base
     {
         List<T> GetAll();
-        void Add(T newL);
-        void Delete(idType id);
-        void Update(T newL);
+        bool Add(T newL);
+        bool Delete(idType id);
+        bool Update(T newL);
     }
 }

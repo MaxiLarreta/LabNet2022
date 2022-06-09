@@ -1,6 +1,6 @@
-﻿using EF.Data;
+﻿using EF.Common.CustomExceptions;
+using EF.Data;
 using EF.Entities;
-using EF.Logic.CustomExceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ namespace EF.Logic
         {
             return _context.Shippers.ToList();
         }
-        public void Add(Shippers newShipper)
+        public bool Add(Shippers newShipper)
         {
             if (string.IsNullOrWhiteSpace(newShipper.CompanyName))
             {
@@ -28,17 +28,24 @@ namespace EF.Logic
             _context.Shippers.Add(newShipper);
 
             _context.SaveChanges();
+            return true;    
         }
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             var shipperDelete = _context.Shippers.Find(id);
+
+            if (shipperDelete == null)
+            {
+                throw new ShipperNullException();
+            }
 
             _context.Shippers.Remove(shipperDelete);
 
             _context.SaveChanges();
+            return true;
         }
 
-        public void Update(Shippers shipper)
+        public bool Update(Shippers shipper)
         {
             var shipperUpdate = _context.Shippers.Find(shipper.ShipperID);
 
@@ -53,6 +60,7 @@ namespace EF.Logic
             shipperUpdate.Phone = shipper.Phone;
 
             _context.SaveChanges();
+            return true;
         }
     }
 }

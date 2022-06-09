@@ -15,23 +15,25 @@ namespace EF.Logic
             return _context.Customers.ToList();
         }
 
-        public void Add(Customers newCustomer)
+        public bool Add(Customers newCustomer)
         {
             _context.Customers.Add(newCustomer);
 
             _context.SaveChanges();
+            return true;
         }
 
-        public void Delete(string id)
+        public bool Delete(string id)
         {
             var customerDelete = _context.Customers.Find(id);
 
             _context.Customers.Remove(customerDelete);
 
             _context.SaveChanges();
+            return true;
         }
 
-        public void Update(Customers customer)
+        public bool Update(Customers customer)
         {
             var customerUpdate = _context.Customers.Find(customer.CustomerID);
 
@@ -39,6 +41,7 @@ namespace EF.Logic
             customerUpdate.ContactName = customer.ContactName;
 
             _context.SaveChanges();
+            return true;
         }
     }
 }
