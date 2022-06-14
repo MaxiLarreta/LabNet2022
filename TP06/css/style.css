@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    font-weight: 600;
+    background: linear-gradient(110deg, #EBD7D9 50%, #E7E7E7 50%);
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p{
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FAFAFA;
+    width: 100%;
+    padding: 0px;
+    align-items: center;
+}
+
+section {
+    margin: auto;
+    max-width: 525px;
+    width: 100%;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin-top: 15px;
+}
+
+.inputEnter {
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    font-size: 17px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.send {
+    margin: 15px 0 15px 0;
+    height: 39px;
+    width: 45%;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #262c37;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+    border-radius: 17px;
+}
+
+.send:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: #DB5461;
+}
+
+.clear {
+    margin: 15px 0 15px 0;
+    height: 39px;
+    width: 45%;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #648381;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+    border-radius: 17px;
+}
+
+.clear:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: #FF8346;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#edad {
+    padding: 0;
+    height: 35px;
+    font-size: 17px;
+    width: 50px;
+    text-align: center;
+    margin-left: 7px;
+}
+
+.inputEnter.error{
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+    margin: 0;
+    font-size: 14px;
+}
+
+#information {
+    display: flex;
+    flex-direction: column;
+    background: #c78080;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    gap: 45px;
+}
+
+.info {
+    display: flex;
+    gap: 60px;
+}
+
+.infoTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display: none !important;
+}

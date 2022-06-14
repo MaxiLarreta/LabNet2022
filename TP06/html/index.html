@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP06</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <section class="principalSection">
+        <h1> CONTACTO </h1>
+        <h2> Completa tus datos. </h2>
+        <form method="POST">
+            <div class="informacion">
+                <legend> Información Personal </legend>
+                <label>Nombre: </label>
+                <input class="inputEnter" type="text" name="Nombre">
+                <label>Apellido: </label>
+                <input class="inputEnter" type="text" name="Apellido">
+                <label>Fecha de nacimiento: </label>
+                <input class="inputEnter" id="nacimiento" type="date" name="Nacimiento">
+                <div>
+                    <label>Edad:</label>
+                    <input id="edad" type="text" name="Edad" value="" readonly>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" value="Masculino" name="Genero">
+                        <label for="Masculino"> Masculino </label>
+                    </li>
+                    <li>
+                        <input type="radio" value="Femenino" name="Genero">
+                        <label for="Femenino"> Femenino </label>
+                    </li>
+                    <li>
+                        <input type="radio" value="Otro" name="Genero">
+                        <label for="Otro"> Otro </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="informacion">
+                <legend>Información Adicional</legend>
+                <label>Empresa: </label>
+                <input class="inputEnter" type="text" name="Empresa">
+            </div>
+            <div class="buttons">
+                <button class="send"> Enviar </button>
+                <button class="clear"> Limpiar </button>
+            </div>
+        </form>
+    </section>
+    <section id="information" class="hide">
+        <legend> Información Enviada</legend>
+        <div class="info">
+            <div class="infoTitle">
+                <label>Nombre: </label>
+                <label> Apellido: </label>
+                <label> Fecha de nacimiento: </label>
+                <label> Edad: </label>
+                <label> Genero: </label>
+                <label>Empresa: </label>
+            </div>
+            <div class="infoSend">
+                <p>nombre</p>
+                <p>apellido</p>         
+                <p>fecha de nacimiento</p>      
+                <p>edad</p>              
+                <p>genero</p>
+                <p>empresa</p>
+            </div>
+    </div>
+      <button class="ok send"> OK </button>
+    </section>
+</body>
+</html>
