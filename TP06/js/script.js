@@ -84,7 +84,8 @@ $(document).ready(function(){
         submitHandler: function(form) {
             let data = Object.values(formData);
             $('.principalSection').addClass("hide")
-            p.forEach((p, i) => {p.innerHTML = data[i]})
+            p.forEach((p, i) => {data[i] == "" ? p.innerText =  "No especifica" : p.innerText = data[i]})
+            console.log(data);
             $('#information').removeClass("hide")
         }
     });
