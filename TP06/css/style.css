@@ -48,6 +48,7 @@ section {
     height: 35px;
     padding: 0;
     font-size: 17px;
+    border: 1px solid black;
 }
 
 ul {

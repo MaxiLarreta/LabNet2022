@@ -38,7 +38,7 @@ $(document).ready(function(){
             Genero: "",
             Empresa: ""
         };
-        inputs.forEach((e) => e.value = "");
+        inputs.forEach((e) => e.checked ? e.checked = false : e.value = "");
     })
     $("form").submit((e) => {
         e.preventDefault()
