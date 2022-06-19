@@ -16,6 +16,16 @@ namespace MVC.Logic
         {
             return _context.Shippers.ToList();
         }
+
+        public Shippers FindOne(int? id)
+        {
+            var shipper = _context.Shippers.Find(id);
+            if (shipper == null)
+            {
+                throw new ShipperNullException();
+            }
+            return shipper;
+        }
         public bool Add(Shippers newShipper)
         {
             if (string.IsNullOrWhiteSpace(newShipper.CompanyName))

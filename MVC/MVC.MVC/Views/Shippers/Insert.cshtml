@@ -1,0 +1,14 @@
+﻿@model MVC.MVC.Models.ShippersView
+@{
+    ViewBag.Title = "Insert Shippers Page";
+}
+
+<h1>Insertar Shipper</h1>
+
+@using (Html.BeginForm("Insert", "Shippers", FormMethod.Post))
+{
+    <label>Company Name: </label> @Html.TextBoxFor(r => r.CompanyName, new { required = "required" })
+    <label>Phone: </label> @Html.TextBoxFor(r => r.Phone) @Html.ValidationMessageFor(m => m.Phone)
+
+    <input type="submit" value="Guardar" />
+}

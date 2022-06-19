@@ -1,0 +1,21 @@
+﻿@model MVC.MVC.Models.ShippersView
+@{
+    ViewBag.Title = "Shippers Update";
+}
+
+<h1>Actualizar Shipper</h1>
+
+@using (Html.BeginForm("Update", "Shippers", FormMethod.Post))
+{
+    {
+        <div style="display: flex; gap: 7px;">
+            <label>ID: </label> <p>@Model.ID</p>
+        </div>
+        <div style="display: flex; gap: 7px;">
+            <label>Company name: </label> <p>@Model.CompanyName</p>
+        </div>
+        <label>Phone: </label> @Html.TextBoxFor(r => r.Phone, new { @Value = @Model.Phone, @required = "required" })
+        <input type="submit" value="Guardar" />
+    }
+
+}
