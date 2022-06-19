@@ -1,0 +1,23 @@
+﻿@model List<MVC.MVC.Models.ShippersView>
+@{
+    ViewBag.Title = "Shippers Page";
+}
+
+<p> shipper page </p>
+<table class="table">
+    <thread>
+        <tr>
+            <th scope="col">Company Name</th>
+            <th scope="col">Phone</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var shipper in Model)
+        {
+            <tr>
+                <td>@shipper.CompanyName</td>
+                <td>@shipper.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
