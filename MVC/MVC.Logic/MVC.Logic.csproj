@@ -71,7 +71,7 @@
       <Name>MVC.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\MVC.Entities\MVC.Entities.csproj">
-      <Project>{9A30E948-8973-44A4-9758-52544BD7544A}</Project>
+      <Project>{9a30e948-8973-44a4-9758-52544bd7544a}</Project>
       <Name>MVC.Entities</Name>
     </ProjectReference>
   </ItemGroup>
