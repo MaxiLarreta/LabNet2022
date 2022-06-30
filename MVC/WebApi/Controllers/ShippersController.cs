@@ -5,12 +5,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using WebApi.Models;
 using WebAppi.Service;
 
 namespace WebApi.Controllers
 {
 
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ShippersController : ApiController       
     {
         private readonly ShippersService _service;
@@ -91,6 +93,7 @@ namespace WebApi.Controllers
                 var shipper = new Shippers
                 {
                     ShipperID = shippers.ShipperID,
+                    CompanyName = shippers.CompanyName,
                     Phone = shippers.Phone,
                 };
                 _service.Update(shipper);

@@ -1,0 +1,21 @@
+
+<form [formGroup]="form" (ngSubmit) = "onSubmitForm()">
+    <div class="form-group" [ngClass]="{'has-error' : form.get('name')?.errors && (form.get('name')?.touched)}">
+        <label for="CompanyName">Company Name</label>
+        <input [ngClass]="{'has-error-input' : form.get('name')?.errors && (form.get('name')?.touched)}" 
+        formControlName="name" type="text" class="form-control" id="CompanyName" placeholder="Company Name" value="{{inputNameValue}}">
+        <p *ngIf = "form.controls['name']?.hasError('required') && (form.get('name')?.touched)">Este campo es requerido</p>
+        <p *ngIf = "form.controls['name']?.hasError('maxLength') && (form.get('name')?.touched)">El nombre no puede superar los 40 caracteres</p>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error' : form.get('phone')?.errors && (form.get('phone')?.touched)}">
+        <label for="Phone">Phone</label>
+        <input [ngClass]="{'has-error-input' : form.get('phone')?.errors && (form.get('phone')?.touched)}"  
+        formControlName="phone" type="text" class="form-control" id="Phone" placeholder="Phone" value="{{inputPhoneValue}}">
+        <p *ngIf = "form.controls['phone']?.hasError('required') && (form.get('phone')?.touched)">Este campo es requerido</p>
+        <p *ngIf = "form.controls['phone']?.hasError('maxLength') && (form.get('phone')?.touched)">El telefono no puede superar los 24 caracteres</p>
+    </div>
+    <div class="buttons">
+        <button type="submit" class="btn btn-outline-light">{{buttonName}}</button>
+        <button (click) = "btnBack()" type="button" class="btn btn-outline-light">Back Menu</button>
+    </div>
+</form>

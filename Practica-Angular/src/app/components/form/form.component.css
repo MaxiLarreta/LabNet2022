@@ -1,0 +1,43 @@
+:host{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    height: 300px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+    border: 1px solid white;
+    justify-content: center;
+}
+.form-control{
+    border: none;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 45%;
+}
+label{
+    margin-bottom: 7px;
+}
+
+.has-error{
+    color: red;
+}
+
+.has-error-input{
+    border: 2px solid red;
+}
+
+p{
+    margin: 0;
+}

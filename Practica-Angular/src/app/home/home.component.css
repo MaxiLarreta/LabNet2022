@@ -1,0 +1,38 @@
+:host {
+    width: 100%;
+    max-width: 770px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+ h1 {
+    align-self: center;
+ }
+
+ .actionButton{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+ }
+
+ .actions{
+    text-align: center;
+ }
+
+ .actionsStyles{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ @media (max-width: 450px) { 
+    .actionsStyles{
+        flex-direction: column;
+        gap: 10px;
+     }
+}

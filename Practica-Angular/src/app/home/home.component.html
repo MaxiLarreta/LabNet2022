@@ -1,0 +1,22 @@
+
+<h1>Manages Shippers</h1>
+<button (click)="btnClick()" type="button" class="btn btn-outline-light">Add new Shipper</button>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Company Name</th>
+      <th scope="col">Phone</th>
+      <th class="actions" scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let shipper of shippers">
+    <tr>
+      <th scope="row">{{shipper.ShipperID}}</th>
+      <td>{{shipper.CompanyName}}</td>
+      <td>{{shipper.Phone}}</td>
+      <td class="actionsStyles"><button class="actionButton" (click)="btnUpdate(shipper.ShipperID)">Update</button> <button (click)="btnDelete(shipper.ShipperID)" class="actionButton">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

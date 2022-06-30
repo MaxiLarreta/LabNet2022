@@ -68,7 +68,13 @@ namespace MVC.Logic
             {
                 throw new PhoneEmptyException();
             }
+            if (string.IsNullOrWhiteSpace(shipper.CompanyName))
+            {
+                throw new PhoneEmptyException();
+            }
+
             shipperUpdate.Phone = shipper.Phone;
+            shipperUpdate.CompanyName = shipper.CompanyName;
 
             _context.SaveChanges();
             return true;

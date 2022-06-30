@@ -11,6 +11,9 @@ namespace WebApi.Models
         [Key]
         public int ShipperID { get; set; }
 
+        [StringLength(40)]
+        public string CompanyName { get; set; }
+
         [StringLength(24)]
         public string Phone { get; set; }
     }
